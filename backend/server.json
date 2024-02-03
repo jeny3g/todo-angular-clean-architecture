@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Comprar leite",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Responder e-mails",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Marcar consulta médica",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Pagar conta de luz",
+      "completed": false
+    }
+  ]
+}
