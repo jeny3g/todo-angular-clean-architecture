@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server ./backend/server.json",
-    "serve:ssr:AngularEcommerceStore": "node dist/angular-ecommerce-store/server/server.mjs"
+    "serve:ssr:AngularEcommerceStore": "node dist/angular-ecommerce-store/server/server.mjs",
+    "translations:extract": "ngx-translate-extract --input ./src --output ./src/assets/i18n/template.json --format=json --clean -sort --marker extract"
   },
   "private": true,
   "dependencies": {

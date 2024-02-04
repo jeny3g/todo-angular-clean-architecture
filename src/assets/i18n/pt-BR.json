@@ -1,0 +1,5 @@
+{
+  "TXT_CRIAR": "Criar",
+  "validateRequired": "O campo <strong>{{0}}</strong> é obrigatório.",
+  "validateMaximumSize": "O campo <strong>{{0}}</strong> deve possuir até <strong>{{1}}</strong> caracteres."
+}
