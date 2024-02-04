@@ -18,14 +18,14 @@ export class TaskUsecaseService implements ITaskUsecase {
   }
 
   insert(param: TaskEntity): Observable<TaskEntity> {
-    throw new Error('Method not implemented.');
+    return this.taskRepository.insert(param);
   }
 
   update(param: TaskEntity): Observable<TaskEntity> {
-    throw new Error('Method not implemented.');
+    return this.taskRepository.update(param);
   }
 
-  delete(id: number, status: boolean): Observable<TaskEntity> {
-    throw new Error('Method not implemented.');
+  delete(id: number): Observable<void> {
+    return this.taskRepository.delete(id);
   }
 }
