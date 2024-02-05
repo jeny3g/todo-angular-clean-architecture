@@ -5,7 +5,7 @@ import { includes } from 'lodash';
 const languageKey = 'language';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class I18nService {
   defaultLanguage: string;

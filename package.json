@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server ./backend/server.json",
-    "serve:ssr:AngularEcommerceStore": "node dist/angular-ecommerce-store/server/server.mjs"
+    "serve:ssr:AngularEcommerceStore": "node dist/angular-ecommerce-store/server/server.mjs",
+    "translations:extract": "ngx-translate-extract --input ./src --output ./src/assets/i18n/template.json --format=json --clean -sort --marker extract"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +30,6 @@
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "rxjs": "~7.8.0",
-    "ts.validator.fluent": "^1.3.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

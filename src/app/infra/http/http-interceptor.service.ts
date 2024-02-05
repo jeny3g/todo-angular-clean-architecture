@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Validator, ValidationError } from 'ts.validator.fluent/dist';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -40,7 +40,7 @@ export class HttpInterceptorService implements HttpInterceptor {
         this.router.navigateByUrl('/login', { replaceUrl: true });
         break;
       case 404:
-        errs.push(new ValidationError('', '', '<strong>404</strong>: O recurso requisitado não existe.'));
+        console.log('Error', response.status);
         break;
       case 406:
       case 409:
