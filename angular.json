@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "AngularEcommerceStore": {
+      "i18n": {
+        "sourceLocale": "pt-BR",
+        "locales": {
+          "en-US": "src/locale/messages.en-US.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": ["en-US"],
             "outputPath": "dist/angular-ecommerce-store",
             "index": "src/index.html",
             "browser": "src/main.ts",

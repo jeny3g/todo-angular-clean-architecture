@@ -2,31 +2,68 @@
   <mat-card class="task-input-card">
     <mat-card-content class="task-input-content">
       <mat-form-field appearance="outline" class="task-input full-width">
-        <mat-label>{{ "TXT_ADICIONAR_NOVA_TAREFA" | translate }}</mat-label>
-        <input matInput placeholder="{{ 'TXT_PLACEHOLDER' | translate }}" />
+        <!-- Adicionando meaning e description para "Adicionar uma nova tarefa" -->
+        <mat-label
+          i18n="Add task form label|Label for adding a new task@@addNewTask"
+          >Adicionar uma nova tarefa</mat-label
+        >
+        <input
+          matInput
+          placeholder="Marcador de posição"
+          i18n-placeholder="
+            Input placeholder|Placeholder text for task input@@taskPlaceholder"
+        />
       </mat-form-field>
-      <button mat-raised-button color="primary" class="create-task-btn">
-        {{ "TXT_CRIAR" | translate }}
+      <button
+        mat-raised-button
+        color="primary"
+        class="create-task-btn"
+        i18n="
+          Create button|Button text for creating a new task@@createTaskButton"
+      >
+        Criar
       </button>
     </mat-card-content>
   </mat-card>
 
   <div class="status-sections">
     <mat-card class="status-card">
-      <mat-card-title>{{ "TXT_TAREFAS_CRIADAS" | translate }}</mat-card-title>
+      <mat-card-title
+        i18n="
+          Tasks created title|Title showing the number of tasks
+          created@@tasksCreated"
+      >
+        Tarefas criadas: 0
+      </mat-card-title>
     </mat-card>
 
     <mat-card class="status-card">
-      <mat-card-title>{{
-        "TXT_TAREFAS_CONCLUIDAS" | translate
-      }}</mat-card-title>
+      <mat-card-title
+        i18n="
+          Tasks completed title|Title showing the number of tasks
+          completed@@tasksCompleted"
+      >
+        Tarefas concluídas: 0
+      </mat-card-title>
     </mat-card>
   </div>
 
   <mat-card class="tasks-list-card">
     <mat-card-content>
-      <p>{{ "TXT_SEM_TAREFAS" | translate }}</p>
-      <p>{{ "TXT_CRIAR_TAREFAS" | translate }}</p>
+      <p
+        i18n="
+          No tasks registered message|Message displayed when no tasks are
+          registered@@noTasksRegistered"
+      >
+        Você não possui tarefas registradas
+      </p>
+      <p
+        i18n="
+          Create tasks message|Encouragement message to create
+          tasks@@createTasksMessage"
+      >
+        Crie tarefas e organize seus itens a fazer
+      </p>
     </mat-card-content>
   </mat-card>
 </div>
