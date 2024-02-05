@@ -11,8 +11,4 @@ export class BaseComponent {
   changeLanguage(lang: string): void {
     this.i18nService.language = lang;
   }
-
-  teste(){
-    console.log(this.i18nService.language)
-  }
 }

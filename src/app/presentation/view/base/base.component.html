@@ -1,18 +1,5 @@
 <mat-toolbar color="primary">
   <span>{{ "TXT_SEU_LOGOTIPO" | translate }}</span>
-
-  <!-- Selector de Idioma -->
-  <div class="language-selector">
-    <button (click)="changeLanguage('en-US')">
-      <img src="path/to/us-flag.png" alt="English" />
-    </button>
-    <button (click)="changeLanguage('pt-BR')">
-      <img src="path/to/br-flag.png" alt="Português" />
-    </button>
-
-    <button (click)="teste()">teste</button>
-  </div>
 </mat-toolbar>
 
-<h1 i18n>teste</h1>
 <router-outlet></router-outlet>
