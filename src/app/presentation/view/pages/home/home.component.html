@@ -1,41 +1,32 @@
-<!-- <div>home works!</div> -->
-
-<!-- <div>
-  {{ "TXT_CRIAR" | translate }}
-</div> -->
-
-<!-- app.component.html -->
-<mat-toolbar color="primary">
-  <span>Your logo</span>
-</mat-toolbar>
-
 <div class="container">
   <mat-card class="task-input-card">
     <mat-card-content class="task-input-content">
       <mat-form-field appearance="outline" class="task-input full-width">
-        <mat-label>Add a new task</mat-label>
-        <input matInput placeholder="Placeholder" />
+        <mat-label>{{ "TXT_ADICIONAR_NOVA_TAREFA" | translate }}</mat-label>
+        <input matInput placeholder="{{ 'TXT_PLACEHOLDER' | translate }}" />
       </mat-form-field>
       <button mat-raised-button color="primary" class="create-task-btn">
-        Create
+        {{ "TXT_CRIAR" | translate }}
       </button>
     </mat-card-content>
   </mat-card>
 
   <div class="status-sections">
     <mat-card class="status-card">
-      <mat-card-title>Tasks created: 0</mat-card-title>
+      <mat-card-title>{{ "TXT_TAREFAS_CRIADAS" | translate }}</mat-card-title>
     </mat-card>
 
     <mat-card class="status-card">
-      <mat-card-title>Tasks completed: 0</mat-card-title>
+      <mat-card-title>{{
+        "TXT_TAREFAS_CONCLUIDAS" | translate
+      }}</mat-card-title>
     </mat-card>
   </div>
 
   <mat-card class="tasks-list-card">
     <mat-card-content>
-      <p>You don't have any tasks registered</p>
-      <p>Create tasks and organize your to-do items</p>
+      <p>{{ "TXT_SEM_TAREFAS" | translate }}</p>
+      <p>{{ "TXT_CRIAR_TAREFAS" | translate }}</p>
     </mat-card-content>
   </mat-card>
 </div>

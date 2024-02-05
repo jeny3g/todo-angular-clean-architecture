@@ -1,5 +1,12 @@
 {
   "TXT_CRIAR": "Criar",
   "validateRequired": "O campo <strong>{{0}}</strong> é obrigatório.",
-  "validateMaximumSize": "O campo <strong>{{0}}</strong> deve possuir até <strong>{{1}}</strong> caracteres."
+  "validateMaximumSize": "O campo <strong>{{0}}</strong> deve possuir até <strong>{{1}}</strong> caracteres.",
+  "TXT_SEU_LOGOTIPO": "Seu logotipo",
+  "TXT_ADICIONAR_NOVA_TAREFA": "Adicionar uma nova tarefa",
+  "TXT_PLACEHOLDER": "Insira sua tarefa aqui",
+  "TXT_TAREFAS_CRIADAS": "Tarefas criadas: 0",
+  "TXT_TAREFAS_CONCLUIDAS": "Tarefas concluídas: 0",
+  "TXT_SEM_TAREFAS": "Você não tem tarefas registradas",
+  "TXT_CRIAR_TAREFAS": "Crie tarefas e organize seus itens a fazer"
 }
