@@ -1,5 +1,41 @@
-<p>home works!</p>
+<!-- <div>home works!</div> -->
 
-<p>
-  {{ 'TXT_CRIAR' | translate }}
-</p>
+<!-- <div>
+  {{ "TXT_CRIAR" | translate }}
+</div> -->
+
+<!-- app.component.html -->
+<mat-toolbar color="primary">
+  <span>Your logo</span>
+</mat-toolbar>
+
+<div class="container">
+  <mat-card class="task-input-card">
+    <mat-card-content class="task-input-content">
+      <mat-form-field appearance="outline" class="task-input full-width">
+        <mat-label>Add a new task</mat-label>
+        <input matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="create-task-btn">
+        Create
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="status-sections">
+    <mat-card class="status-card">
+      <mat-card-title>Tasks created: 0</mat-card-title>
+    </mat-card>
+
+    <mat-card class="status-card">
+      <mat-card-title>Tasks completed: 0</mat-card-title>
+    </mat-card>
+  </div>
+
+  <mat-card class="tasks-list-card">
+    <mat-card-content>
+      <p>You don't have any tasks registered</p>
+      <p>Create tasks and organize your to-do items</p>
+    </mat-card-content>
+  </mat-card>
+</div>
