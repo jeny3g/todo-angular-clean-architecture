@@ -5,9 +5,9 @@
   "projects": {
     "AngularEcommerceStore": {
       "i18n": {
-        "sourceLocale": "pt-BR",
+        "sourceLocale": "en-US",
         "locales": {
-          "en-US": "src/locale/messages.en-US.xlf"
+          "pt-BR": "src/locale/messages.pt-BR.xlf"
         }
       },
       "projectType": "application",

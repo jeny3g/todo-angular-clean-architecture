@@ -2,14 +2,13 @@
   <mat-card class="task-input-card">
     <mat-card-content class="task-input-content">
       <mat-form-field appearance="outline" class="task-input full-width">
-        <!-- Adicionando meaning e description para "Adicionar uma nova tarefa" -->
         <mat-label
           i18n="Add task form label|Label for adding a new task@@addNewTask"
-          >Adicionar uma nova tarefa</mat-label
+          >Add a new task</mat-label
         >
         <input
           matInput
-          placeholder="Marcador de posição"
+          placeholder="Placeholder"
           i18n-placeholder="
             Input placeholder|Placeholder text for task input@@taskPlaceholder"
         />
@@ -21,7 +20,7 @@
         i18n="
           Create button|Button text for creating a new task@@createTaskButton"
       >
-        Criar
+        Create
       </button>
     </mat-card-content>
   </mat-card>
@@ -33,7 +32,7 @@
           Tasks created title|Title showing the number of tasks
           created@@tasksCreated"
       >
-        Tarefas criadas: 0
+        Tasks created: 0
       </mat-card-title>
     </mat-card>
 
@@ -43,7 +42,7 @@
           Tasks completed title|Title showing the number of tasks
           completed@@tasksCompleted"
       >
-        Tarefas concluídas: 0
+        Tasks completed: 0
       </mat-card-title>
     </mat-card>
   </div>
@@ -55,14 +54,14 @@
           No tasks registered message|Message displayed when no tasks are
           registered@@noTasksRegistered"
       >
-        Você não possui tarefas registradas
+        You have no registered tasks
       </p>
       <p
         i18n="
           Create tasks message|Encouragement message to create
           tasks@@createTasksMessage"
       >
-        Crie tarefas e organize seus itens a fazer
+        Create tasks and organize your to-do items
       </p>
     </mat-card-content>
   </mat-card>
