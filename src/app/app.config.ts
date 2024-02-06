@@ -13,20 +13,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { DomainModule } from './domain/domain.module';
 import { DataModule } from './data/data.module';
 import { PresentationModule } from './presentation/presentation.module';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(withFetch()),
     provideRouter(routes),
     provideClientHydration(),
-    importProvidersFrom(
-      HttpClientModule,
-      InfraModule,
-      DomainModule,
-      DataModule,
-      PresentationModule
-    ),
+    importProvidersFrom(HttpClientModule, InfraModule, DomainModule, DataModule, PresentationModule),
     provideAnimationsAsync(),
     provideHttpClient(),
-  ],
+    provideAnimations()
+],
 };
