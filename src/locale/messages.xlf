@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="addNewTask" datatype="html">
+        <source>Add a new task</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">7,11</context>
+        </context-group>
+        <note priority="1" from="description">Label for adding a new task</note>
+        <note priority="1" from="meaning">Add task form label</note>
+      </trans-unit>
+      <trans-unit id="taskPlaceholder" datatype="html">
+        <source>Placeholder</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder text for task input</note>
+        <note priority="1" from="meaning">Input placeholder</note>
+      </trans-unit>
+      <trans-unit id="createTaskButton" datatype="html">
+        <source> Create </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">23,28</context>
+        </context-group>
+        <note priority="1" from="description">Button text for creating a new task</note>
+        <note priority="1" from="meaning">Create button</note>
+      </trans-unit>
+      <trans-unit id="tasksCreated" datatype="html">
+        <source> Tasks created: 0 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">35,40</context>
+        </context-group>
+        <note priority="1" from="description">Title showing the number of tasks
+          created</note>
+        <note priority="1" from="meaning">Tasks created title</note>
+      </trans-unit>
+      <trans-unit id="tasksCompleted" datatype="html">
+        <source> Tasks completed: 0 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">45,51</context>
+        </context-group>
+        <note priority="1" from="description">Title showing the number of tasks
+          completed</note>
+        <note priority="1" from="meaning">Tasks completed title</note>
+      </trans-unit>
+      <trans-unit id="noTasksRegistered" datatype="html">
+        <source> You have no registered tasks </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">57,62</context>
+        </context-group>
+        <note priority="1" from="description">Message displayed when no tasks are
+          registered</note>
+        <note priority="1" from="meaning">No tasks registered message</note>
+      </trans-unit>
+      <trans-unit id="createTasksMessage" datatype="html">
+        <source> Create tasks and organize your to-do items </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.html</context>
+          <context context-type="linenumber">64,69</context>
+        </context-group>
+        <note priority="1" from="description">Encouragement message to create
+          tasks</note>
+        <note priority="1" from="meaning">Create tasks message</note>
+      </trans-unit>
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source><x id="PH" equiv-text="this.title"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/view/pages/home/home.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
