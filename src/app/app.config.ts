@@ -9,7 +9,6 @@ import {
   withFetch,
 } from '@angular/common/http';
 import { InfraModule } from './infra/infra.module';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DomainModule } from './domain/domain.module';
 import { DataModule } from './data/data.module';
 import { PresentationModule } from './presentation/presentation.module';
@@ -20,8 +19,13 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideRouter(routes),
     provideClientHydration(),
-    importProvidersFrom(HttpClientModule, InfraModule, DomainModule, DataModule, PresentationModule),
-    provideAnimationsAsync(),
-    provideAnimations()
-],
+    importProvidersFrom(
+      HttpClientModule,
+      InfraModule,
+      DomainModule,
+      DataModule,
+      PresentationModule
+    ),
+    provideAnimations(),
+  ],
 };
