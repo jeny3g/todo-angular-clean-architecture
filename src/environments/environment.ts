@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   version: '1.0.0',
-  serverUrl: 'http://localhost:3000',
+  serverUrl:
+    'https://todo-angular-clean-architecture-json-server.vercel.app',
   defaultLanguage: 'pt-BR',
   supportedLanguages: ['pt-BR', 'en-US'],
 };

@@ -24,7 +24,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "localize": [
-              "pt-BR"
+              "pt-BR", "en-US"
             ],
             "outputPath": "dist/angular-ecommerce-store",
             "index": "src/index.html",
