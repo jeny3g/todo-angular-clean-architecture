@@ -11,11 +11,11 @@ export class AuthService {
   private usuario: UserEntity;
 
   constructor() {
-    const savedCredentials = sessionStorage.getItem(credentialsKey) || localStorage.getItem(credentialsKey);
+    // const savedCredentials = sessionStorage.getItem(credentialsKey) || localStorage.getItem(credentialsKey);
 
-    if (savedCredentials) {
-      this.usuario = JSON.parse(savedCredentials);
-    }
+    // if (savedCredentials) {
+    //   this.usuario = JSON.parse(savedCredentials);
+    // }
   }
 
   isAuthenticated(): boolean {

@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
   //   {
   //     provide: HTTP_INTERCEPTORS,
   //     useClass: HttpInterceptorService,
-  //     multi: true
-  //   }
-  // ]
+  //     multi: true,
+  //   },
+  // ],
 })
 export class InfraModule {}
