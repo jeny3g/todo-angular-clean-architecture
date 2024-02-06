@@ -20,9 +20,14 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideRouter(routes),
     provideClientHydration(),
-    importProvidersFrom(HttpClientModule, InfraModule, DomainModule, DataModule, PresentationModule),
+    importProvidersFrom(
+      HttpClientModule,
+      InfraModule,
+      DomainModule,
+      DataModule,
+      PresentationModule
+    ),
     provideAnimationsAsync(),
-    provideHttpClient(),
-    provideAnimations()
-],
+    provideAnimations(),
+  ],
 };
