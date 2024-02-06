@@ -1,80 +1,3 @@
-<!-- <div class="container">
-  <mat-card class="task-input-card">
-    <mat-card-content class="task-input-content">
-      <mat-form-field appearance="outline" class="task-input full-width">
-        <mat-label
-          i18n="Add task form label|Label for adding a new task@@addNewTask"
-          >Add a new task</mat-label
-        >
-        <input
-          matInput
-          placeholder="Placeholder"
-          i18n-placeholder="
-            Input placeholder|Placeholder text for task input@@taskPlaceholder"
-        />
-      </mat-form-field>
-      <button
-        mat-raised-button
-        color="primary"
-        class="create-task-btn"
-        i18n="
-          Create button|Button text for creating a new task@@createTaskButton"
-      >
-        Create
-      </button>
-    </mat-card-content>
-  </mat-card>
-
-  <div class="status-sections">
-    <mat-card class="status-card">
-      <mat-card-title
-        i18n="
-          Tasks created title|Title showing the number of tasks
-          created@@tasksCreated"
-      >
-        Tasks created: 0
-      </mat-card-title>
-    </mat-card>
-
-    <mat-card class="status-card">
-      <mat-card-title
-        i18n="
-          Tasks completed title|Title showing the number of tasks
-          completed@@tasksCompleted"
-      >
-        Tasks completed: 0
-      </mat-card-title>
-    </mat-card>
-  </div>
-
-  <mat-card class="tasks-list-card">
-    <mat-card-content>
-      <p
-        i18n="
-          No tasks registered message|Message displayed when no tasks are
-          registered@@noTasksRegistered"
-      >
-        You have no registered tasks
-      </p>
-      <p
-        i18n="
-          Create tasks message|Encouragement message to create
-          tasks@@createTasksMessage"
-      >
-        Create tasks and organize your to-do items
-      </p>
-    </mat-card-content>
-  </mat-card>
-
-  <li *ngFor="let task of tasks$ | async">
-    {{ task | json }}
-  </li>
-
-  <mat-list role="list" *ngFor="let task of tasks$ | async">
-    <mat-list-item role="listitem">{{ task.title }}</mat-list-item>
-  </mat-list>
-</div> -->
-
 <div class="card shadow-lg">
   <div class="card-header text-center py-4 border-0">
     <h1 class="display-6 fw-bold">To Do List</h1>
@@ -84,10 +7,11 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Recipient's username"
-        aria-label="Recipient's username"
+        placeholder="Add new task"
+        aria-label="Add new task"
         aria-describedby="button-addon2"
       />
+
       <button
         class="btn btn-primary"
         type="button"
@@ -95,11 +19,10 @@
         mdbRipple
         rippleColor="danger"
       >
-        Button
+        Criar
       </button>
     </div>
 
-    <!-- <div class="d-flex justify-content-center align-items-center"> -->
     <ul class="list-group">
       <li
         class="list-group-item mb-2 border py-3 rounded-3 d-flex justify-content-between align-items-center"
@@ -110,15 +33,20 @@
           class="form-check-input"
           type="checkbox"
           value=""
-          id="flexCheckChecked"
+          [id]="'flexCheckChecked-' + task.id"
           [checked]="task.completed"
         />
+
         {{ task.title }}
-        <button type="button" class="btn btn-primary btn-floating" mdbRipple>
+        <button
+          type="button"
+          class="btn btn-primary btn-floating"
+          mdbRipple
+          aria-label="Delete task"
+        >
           <i class="fas fa-trash-alt"></i>
         </button>
       </li>
     </ul>
-    <!-- </div> -->
   </div>
 </div>
