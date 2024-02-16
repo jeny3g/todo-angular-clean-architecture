@@ -1,16 +1,24 @@
 <li class="todo-item">
-  <input type="checkbox" [(ngModel)]="todo.completed" (change)="onToggleCompleted()">
+  <input
+    type="checkbox"
+    [(ngModel)]="todo.completed"
+    (change)="onToggleCompleted()"
+  />
 
-  <span [ngClass]="{'completed': todo.completed}" (click)="onToggleCompleted()">
+  <span [ngClass]="{ completed: todo.completed }" (click)="onToggleCompleted()">
     {{ todo.task }}
   </span>
 
   <div *ngIf="!editMode; else editTemplate">
-    <button class="edit-button" (click)="startEdit()"><i class="material-icons">edit</i></button>
-    <button class="remove-button" (click)="onRemove()"><i class="material-icons">delete</i></button>
+    <button class="edit-button" (click)="startEdit()">
+      <i class="material-icons">edit</i>
+    </button>
+    <button class="remove-button" (click)="onRemove()">
+      <i class="material-icons">delete</i>
+    </button>
   </div>
 
   <ng-template #editTemplate>
-    <input type="text" [(ngModel)]="todo.task" (blur)="saveEdit(todo.task)">
+    <input type="text" [(ngModel)]="todo.task" (blur)="saveEdit(todo.task)" />
   </ng-template>
 </li>

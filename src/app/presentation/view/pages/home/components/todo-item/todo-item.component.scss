@@ -5,3 +5,11 @@
   padding: 10px;
   border-bottom: 1px solid #eee;
 }
+
+.completed {
+  text-decoration: line-through; /* Strikethrough for completed tasks */
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}

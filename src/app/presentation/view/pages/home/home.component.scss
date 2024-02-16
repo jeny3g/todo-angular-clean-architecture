@@ -20,3 +20,20 @@ input[type="text"] {
   box-sizing: border-box;
   margin-bottom: 15px;
 }
+
+#new-todo-input {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #444;
+}
+
+#new-todo-input::placeholder {
+  color: #ccc;
+  font-weight: lighter;
+}
