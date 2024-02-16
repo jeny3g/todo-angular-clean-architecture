@@ -3,6 +3,7 @@ import { ITaskController } from '../../domain/interfaces/controllers/itask-contr
 import { Observable } from 'rxjs';
 import { TaskEntity } from '../../domain/entities/task-entity';
 import { ITaskUsecase } from '../../domain/interfaces/usecases/itask-usecase';
+import { TaskCreateDto } from '../../domain/dtos/task/task-create-dto';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class TaskControllerService implements ITaskController {
     return this.taskUseCase.get();
   }
 
-  insert(task: TaskEntity): Observable<TaskEntity> {
+  insert(task: TaskCreateDto): Observable<TaskEntity> {
     return this.taskUseCase.insert(task);
   }
 

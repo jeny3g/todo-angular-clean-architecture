@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TaskEntity } from '../../../../../../domain/entities/task-entity';
+import { ITaskController } from '../../../../../../domain/interfaces/controllers/itask-controller';
 
 @Component({
   selector: 'app-todo-item',
@@ -19,6 +20,8 @@ export class TodoItemComponent {
 
   editMode = false;
 
+  constructor(private service: ITaskController) {}
+
   onRemove() {
     this.remove.emit(this.index);
   }
@@ -31,8 +34,11 @@ export class TodoItemComponent {
     this.editMode = true;
   }
 
-  saveEdit(newTask: string) {
-    this.edit.emit({ index: this.index, newTask });
-    this.editMode = false;
+  saveEdit(taskId: number, newTask: string) {
+    const updatedTask: TaskEntity = { ...this.todo, id: taskId, task: newTask };
+    this.service.update(updatedTask).subscribe(() => {
+      // Success! Exit edit mode and optionally refresh task list
+      this.editMode = false;
+    });
   }
 }

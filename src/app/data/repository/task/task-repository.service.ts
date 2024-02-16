@@ -4,6 +4,7 @@ import { ITaskRepository } from '../../../domain/interfaces/repository/itask-rep
 import { Observable } from 'rxjs';
 import { TaskEntity } from '../../../domain/entities/task-entity';
 import { environment } from '../../../../environments/environment.prod';
+import { TaskCreateDto } from '../../../domain/dtos/task/task-create-dto';
 
 @Injectable({
   providedIn: 'root',
@@ -14,16 +15,18 @@ export class TaskRepositoryService implements ITaskRepository {
   constructor(private http: HttpClient) {}
 
   get(): Observable<TaskEntity[]> {
-    return this.http
-      .get<TaskEntity[]>(environment.serverUrl + '/tasks');
+    return this.http.get<TaskEntity[]>(environment.serverUrl + '/tasks');
   }
 
-  insert(task: TaskEntity): Observable<TaskEntity> {
+  insert(task: TaskCreateDto): Observable<TaskEntity> {
     return this.http.post<TaskEntity>(`${environment.serverUrl}/tasks`, task);
   }
 
   update(task: TaskEntity): Observable<TaskEntity> {
-    return this.http.put<TaskEntity>(`${environment.serverUrl}/tasks/${task.id}`, task);
+    return this.http.put<TaskEntity>(
+      `${environment.serverUrl}/tasks/${task.id}`,
+      task
+    );
   }
 
   delete(id: number): Observable<void> {

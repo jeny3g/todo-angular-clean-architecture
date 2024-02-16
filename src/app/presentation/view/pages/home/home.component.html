@@ -11,7 +11,7 @@
 
   <ul>
     <app-todo-item
-      *ngFor="let todo of todos; let i = index"
+      *ngFor="let todo of tasks$ | async; let i = index"
       [todo]="todo"
       [index]="i"
       (remove)="removeTodo($event)"

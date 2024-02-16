@@ -10,6 +10,7 @@ import {
   throwError,
 } from 'rxjs';
 import { TaskEntity } from '../entities/task-entity';
+import { TaskCreateDto } from '../dtos/task/task-create-dto';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +27,7 @@ export class TaskUsecaseService implements ITaskUsecase {
     return this.cachedTasks$;
   }
 
-  insert(task: TaskEntity): Observable<TaskEntity> {
+  insert(task: TaskCreateDto): Observable<TaskEntity> {
     return this.taskRepository.insert(task).pipe(
       catchError((error) => {
         console.error('Error inserting task', error);
