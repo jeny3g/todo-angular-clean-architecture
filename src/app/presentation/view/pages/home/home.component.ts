@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ITaskController } from '../../../../domain/interfaces/controllers/itask-controller';
-import { TaskEntity } from '../../../../domain/entities/task-entity';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,21 +6,26 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  title = 'Lista';
+  tarefas: string[] = [];
+  novaTarefa: string = '';
 
-  tasks$: Observable<TaskEntity[]> | null;
-  tasksCreatedCount = 0;
-  tasksCompletedCount = 0;
+  constructor() {}
 
-  constructor(private titleService: Title, private service: ITaskController) {
-    this.titleService.setTitle($localize`${this.title}`);
+  ngOnInit(): void {}
+
+  adicionarTarefa() {
+    if (this.novaTarefa === '') {
+      return;
+    }
+
+    this.tarefas.push(this.novaTarefa);
+    this.novaTarefa = '';
   }
 
-  ngOnInit(): void {
-    this.tasks$ = this.service.get();
+  removerTarefa(tarefa: string) {
+    const index = this.tarefas.indexOf(tarefa);
+    if (index > -1) {
+      this.tarefas.splice(index, 1);
+    }
   }
-
-  completeTask(task: TaskEntity): void {}
-
-  deleteTask(task: TaskEntity): void {}
 }

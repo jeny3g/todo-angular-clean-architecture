@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
-import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, HomeRoutingModule, MdbRippleModule, MdbFormsModule],
+  imports: [CommonModule, HomeRoutingModule],
 })
 export class HomeModule {}
