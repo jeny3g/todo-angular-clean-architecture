@@ -13,21 +13,23 @@ import { ITaskController } from '../../../../../../domain/interfaces/controllers
 })
 export class TodoItemComponent {
   @Input() todo: TaskEntity;
-  @Input() index: number;
   @Output() remove = new EventEmitter<number>();
-  @Output() toggleCompleted = new EventEmitter<number>();
-  @Output() edit = new EventEmitter<{ index: number; newTask: string }>();
+  @Output() toggleCompleted = new EventEmitter<TaskEntity>();
+  @Output() edit = new EventEmitter<TaskEntity>();
 
   editMode = false;
 
   constructor(private service: ITaskController) {}
 
   onRemove() {
-    this.remove.emit(this.index);
+    this.remove.emit(this.todo.id);
   }
 
   onToggleCompleted() {
-    this.toggleCompleted.emit(this.index);
+    this.toggleCompleted.emit({
+      ...this.todo,
+      completed: !this.todo.completed,
+    } as TaskEntity);
   }
 
   startEdit() {
@@ -37,7 +39,6 @@ export class TodoItemComponent {
   saveEdit(taskId: number, newTask: string) {
     const updatedTask: TaskEntity = { ...this.todo, id: taskId, task: newTask };
     this.service.update(updatedTask).subscribe((teste) => {
-      console.log(teste);
       // Success! Exit edit mode and optionally refresh task list
       this.editMode = false;
     });

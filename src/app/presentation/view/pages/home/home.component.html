@@ -13,10 +13,9 @@
     <app-todo-item
       *ngFor="let todo of tasks$ | async; let i = index"
       [todo]="todo"
-      [index]="i"
-      (remove)="removeTodo($event)"
+      (remove)="removeTodo(todo.id)"
       (toggleCompleted)="toggleCompleted($event)"
-      (edit)="editTodo($event.index, $event.newTask)"
+      (edit)="editTodo($event)"
     >
     </app-todo-item>
   </ul>

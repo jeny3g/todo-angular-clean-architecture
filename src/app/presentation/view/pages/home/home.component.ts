@@ -46,21 +46,19 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  toggleCompleted(index: number) {
-    // this.todos[index].completed = !this.todos[index].completed;
-    this.saveTodos();
+  toggleCompleted(task: TaskEntity) {
+    this.service.update(task).subscribe(() => {
+      // Successfully updated, optionally refresh task list
+    });
   }
 
-  editTodo(index: number, newTask: string) {
+  editTodo(newTask: TaskEntity) {
     // this.todos[index].task = newTask;
-    this.saveTodos();
-  }
+    this.service.update(newTask).subscribe(() => {
+      // Successfully updated, optionally refresh task list
+    });  }
 
   saveTodos() {
     // localStorage.setItem('todos', JSON.stringify(this.todos));
-  }
-
-  private refreshTasks(): Observable<TaskEntity[]> | null {
-    return this.service.get();
   }
 }
