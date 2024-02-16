@@ -1,36 +1,22 @@
-.container {
+.todo-list {
+  width: 400px;
+  margin: 30px auto;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-mat-form-field {
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+input[type="text"] {
   width: 100%;
-}
-
-mat-input-field {
-  width: 80%;
-}
-
-button {
-  margin-left: 10px;
-}
-
-mat-list {
-  padding: 0;
-}
-
-mat-list-item {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-mat-list-item:hover {
-  background-color: #ddd;
-}
-
-button.mat-icon-button {
-  float: right;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
 }

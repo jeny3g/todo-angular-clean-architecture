@@ -1,0 +1,23 @@
+<div class="todo-list">
+  <h1>My Todo List</h1>
+
+  <input
+    type="text"
+    [(ngModel)]="newTodo"
+    (keyup.enter)="addTodo()"
+    placeholder="What needs to be done?"
+    id="new-todo-input"
+  />
+
+  <ul>
+    <app-todo-item
+      *ngFor="let todo of todos; let i = index"
+      [todo]="todo"
+      [index]="i"
+      (remove)="removeTodo($event)"
+      (toggleCompleted)="toggleCompleted($event)"
+      (edit)="editTodo($event.index, $event.newTask)"
+    >
+    </app-todo-item>
+  </ul>
+</div>
