@@ -1,11 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-interface TodoItem {
-  task: string;
-  completed: boolean;
-}
+import { TaskEntity } from '../../../../../../domain/entities/task-entity';
 
 @Component({
   selector: 'app-todo-item',
@@ -15,7 +11,7 @@ interface TodoItem {
   styleUrl: './todo-item.component.scss',
 })
 export class TodoItemComponent {
-  @Input() todo: TodoItem;
+  @Input() todo: TaskEntity;
   @Input() index: number;
   @Output() remove = new EventEmitter<number>();
   @Output() toggleCompleted = new EventEmitter<number>();

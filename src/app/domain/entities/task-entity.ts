@@ -1,6 +1,6 @@
 import { DomainEntity } from "./base/domain-entity";
 
 export class TaskEntity extends DomainEntity {
-  title: string = '';
+  task: string = '';
   completed: boolean = false;
 }

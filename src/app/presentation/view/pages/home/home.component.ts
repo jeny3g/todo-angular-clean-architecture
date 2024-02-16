@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface TodoItem {
-  task: string;
-  completed: boolean;
-}
+import { TaskEntity } from '../../../../domain/entities/task-entity';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +7,7 @@ interface TodoItem {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  todos: TodoItem[] = [];
+  todos: TaskEntity[] = [];
   newTodo: string = '';
 
   ngOnInit() {
