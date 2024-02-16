@@ -7,4 +7,5 @@ export abstract class ITaskUsecase {
   abstract insert(param: TaskCreateDto): Observable<TaskEntity>;
   abstract update(param: TaskEntity): Observable<TaskEntity>;
   abstract delete(id: number): Observable<void>;
+  abstract get tasksUpdated$(): Observable<void>;
 }

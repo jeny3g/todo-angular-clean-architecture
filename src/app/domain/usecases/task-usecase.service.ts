@@ -3,6 +3,7 @@ import { ITaskRepository } from '../interfaces/repository/itask-repository';
 import { ITaskUsecase } from '../interfaces/usecases/itask-usecase';
 import {
   Observable,
+  Subject,
   catchError,
   map,
   shareReplay,
@@ -16,6 +17,8 @@ import { TaskCreateDto } from '../dtos/task/task-create-dto';
   providedIn: 'root',
 })
 export class TaskUsecaseService implements ITaskUsecase {
+  public tasksUpdated$ = new Subject<void>();
+
   private cachedTasks$: Observable<TaskEntity[]> | null = null;
 
   constructor(private taskRepository: ITaskRepository) {}
@@ -33,7 +36,11 @@ export class TaskUsecaseService implements ITaskUsecase {
         console.error('Error inserting task', error);
         return throwError(() => new Error('Failed to insert task'));
       }),
-      tap(() => this.refreshTasksCache())
+      tap((test) => {
+        console.log(test)
+        this.refreshTasksCache();
+        this.tasksUpdated$.next();
+      })
     );
   }
 
@@ -43,7 +50,10 @@ export class TaskUsecaseService implements ITaskUsecase {
         console.error('Error updating task', error);
         return throwError(() => new Error('Failed to update task'));
       }),
-      tap(() => this.refreshTasksCache())
+      tap(() => {
+        this.refreshTasksCache();
+        this.tasksUpdated$.next();
+      })
     );
   }
 
@@ -53,7 +63,10 @@ export class TaskUsecaseService implements ITaskUsecase {
         console.error('Error deleting task', error);
         return throwError(() => new Error('Failed to delete task'));
       }),
-      tap(() => this.refreshTasksCache())
+      tap(() => {
+        this.refreshTasksCache();
+        this.tasksUpdated$.next();
+      })
     );
   }
 

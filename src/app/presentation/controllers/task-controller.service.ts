@@ -26,4 +26,8 @@ export class TaskControllerService implements ITaskController {
   delete(id: number): Observable<void> {
     return this.taskUseCase.delete(id);
   }
+
+  get tasksUpdated$(): Observable<void> {
+    return this.taskUseCase.tasksUpdated$;
+  }
 }

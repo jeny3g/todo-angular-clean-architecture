@@ -19,6 +19,7 @@ export class TaskRepositoryService implements ITaskRepository {
   }
 
   insert(task: TaskCreateDto): Observable<TaskEntity> {
+    console.log(task)
     return this.http.post<TaskEntity>(`${environment.serverUrl}/tasks`, task);
   }
 

@@ -36,7 +36,8 @@ export class TodoItemComponent {
 
   saveEdit(taskId: number, newTask: string) {
     const updatedTask: TaskEntity = { ...this.todo, id: taskId, task: newTask };
-    this.service.update(updatedTask).subscribe(() => {
+    this.service.update(updatedTask).subscribe((teste) => {
+      console.log(teste);
       // Success! Exit edit mode and optionally refresh task list
       this.editMode = false;
     });

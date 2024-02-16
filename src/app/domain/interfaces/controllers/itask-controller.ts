@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { TaskEntity } from '../../entities/task-entity';
 import { TaskCreateDto } from '../../dtos/task/task-create-dto';
 
@@ -7,4 +7,5 @@ export abstract class ITaskController {
   abstract insert(task: TaskCreateDto): Observable<TaskEntity>;
   abstract update(task: TaskEntity): Observable<TaskEntity>;
   abstract delete(id: number): Observable<void>;
+  abstract get tasksUpdated$(): Observable<void>;
 }
